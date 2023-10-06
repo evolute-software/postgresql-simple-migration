@@ -39,11 +39,11 @@ Library
     default-language:       Haskell2010
     build-depends:          base                        >= 4.6      && < 5.0,
                             base64-bytestring           >= 1.0      && < 1.3,
-                            bytestring                  >= 0.10     && < 0.13,
+                            bytestring                  >= 0.10     && < 0.12,
                             cryptohash                  >= 0.11     && < 0.12,
                             directory                   >= 1.2      && < 1.4,
-                            postgresql-simple           >= 0.4      && < 0.7,
-                            time                        >= 1.4      && < 1.10
+                            postgresql-simple           >= 0.4      && < 0.8,
+                            time                        >= 1.4      && < 1.12
 
 Executable migrate
     main-is:                Main.hs
@@ -53,12 +53,12 @@ Executable migrate
     default-language:       Haskell2010
     build-depends:          base                        >= 4.6      && < 5.0,
                             base64-bytestring           >= 1.0      && < 1.3,
-                            bytestring                  >= 0.10     && < 0.13,
+                            bytestring                  >= 0.10     && < 0.12,
                             cryptohash                  >= 0.11     && < 0.12,
                             directory                   >= 1.2      && < 1.4,
-                            postgresql-simple           >= 0.4      && < 0.7,
-                            time                        >= 1.4      && < 1.10,
-                            text                        >= 1.2      && < 1.3
+                            postgresql-simple           >= 0.4      && < 0.8,
+                            time                        >= 1.4      && < 1.12,
+                            text                        >= 1.2      && < 2.1
 
 test-suite tests
     main-is:                Main.hs
@@ -69,7 +69,7 @@ test-suite tests
     default-language:       Haskell2010
     type:                   exitcode-stdio-1.0
     build-depends:          base                        >= 4.6      && < 5.0,
-                            bytestring                  >= 0.10     && < 0.13,
-                            postgresql-simple           >= 0.4      && < 0.7,
+                            bytestring == 0.11.5.2,
+                            postgresql-simple           >= 0.4      && < 0.8,
                             hspec                       >= 2.2      && < 2.8,
                             postgresql-simple-migration
